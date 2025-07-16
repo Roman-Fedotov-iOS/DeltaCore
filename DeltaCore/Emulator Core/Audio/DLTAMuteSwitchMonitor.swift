@@ -1,4 +1,5 @@
 import Foundation
+import notify
 
 public class DLTAMuteSwitchMonitor {
     public private(set) var isMonitoring = false

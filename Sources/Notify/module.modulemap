@@ -1,0 +1,5 @@
+module Notify [system] {
+    header "notify.h"
+    link "notify"
+    export *
+}
