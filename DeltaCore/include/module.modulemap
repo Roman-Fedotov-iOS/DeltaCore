@@ -1,0 +1,4 @@
+module Notify {
+    header "/usr/include/notify.h"
+    export *
+}
