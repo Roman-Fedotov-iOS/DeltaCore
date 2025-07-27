@@ -135,8 +135,6 @@ public class AudioManager: NSObject, AudioRendering
             self.updateOutputVolume()
         }
     }
-    
-    private let muteSwitchMonitor = DLTAMuteSwitchMonitor()
         
     public init(audioFormat: AVAudioFormat)
     {
@@ -181,9 +179,6 @@ public extension AudioManager
 {
     func start()
     {
-        self.muteSwitchMonitor.startMonitoring { [weak self] (isMuted) in
-            self?.isMuted = isMuted
-        }
         
         do
         {
@@ -207,7 +202,6 @@ public extension AudioManager
     
     func stop()
     {
-        self.muteSwitchMonitor.stopMonitoring()
         
         self.renderingQueue.sync {
             self.audioPlayerNode.stop()
