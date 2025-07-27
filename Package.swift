@@ -36,8 +36,7 @@ let package = Package(
                 "UI"
             ],
             sources: [
-                "DeltaTypes.m",
-                "Emulator Core/Audio/DLTAMuteSwitchMonitor.m",
+                "DeltaTypes.m"
             ],
             publicHeadersPath: "include"
         ),
@@ -47,7 +46,6 @@ let package = Package(
             path: "DeltaCore",
             exclude: [
                 "DeltaTypes.m",
-                "Emulator Core/Audio/DLTAMuteSwitchMonitor.m",
                 "Supporting Files/Info.plist",
             ],
             resources: [
